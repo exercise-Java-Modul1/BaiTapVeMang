@@ -14,14 +14,14 @@ public class TimGiaTriLonNhatTrongMang {
         }
         for (int i = 0; i < list.length; i++) {
             for (int j = 1; j < list.length; j++) {
-                if (list[i] < list[j]) {
+                if (list[i] > list[j]) {
                     int temp = list[i];
                     list[i] = list[j];
                     list[j] = temp;
                 }
             }
         }
-        for (int i = 1; i < list.length; i++) {
+        for (int i = 0; i < list.length; i++) {
             System.out.println(list[i]);
         }
     }
