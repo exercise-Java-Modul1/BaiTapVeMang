@@ -12,14 +12,17 @@ public class TimGiaTriLonNhatTrongMang {
             int num = sc.nextInt();
             list[i] = num;
         }
-        int max = list[0];
-        int count = 0;
-        for (int i = 1; i < list.length; i++) {
-            if (max < list[i]) {
-                max = list[i];
-                count = i + 1;
+        for (int i = 0; i < list.length; i++) {
+            for (int j = 1; j < list.length; j++) {
+                if (list[i] < list[j]) {
+                    int temp = list[i];
+                    list[i] = list[j];
+                    list[j] = temp;
+                }
             }
         }
-        System.out.println("Giá trị lớn nhất trong dãy số là: " + max + ",at position " + count);
+        for (int i = 1; i < list.length; i++) {
+            System.out.println(list[i]);
+        }
     }
 }
